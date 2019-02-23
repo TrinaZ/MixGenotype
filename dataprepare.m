@@ -1,0 +1,52 @@
+load F:/importantfilecopy/tandomrepeat/2019.121test/2/tenresults
+A = tenresults(:,1:16)
+X = tenresults(:,1:15)
+B = zeros(1007,4)
+t = tenresults(:,16)
+for i = 1:length(t)
+    if t(i) == 1
+        B(i,1)=1;
+    end
+    if t(i) == 2
+        B(i,2)=1;
+    end 
+    if t(i) == 3
+        B(i,3)=1;
+    end 
+    if t(i) ==4
+        B(i,4)=1;
+    end
+end
+t = B'
+N = 1007
+C = 4
+D = 15
+save tpcompare1
+
+        
+% % A = result
+% % normalized_data = mapminmax(results(:,1:8),0,1)
+% % A = A./repmat(sqrt(sum(A.^2,1)),size(A,1),1);
+% 
+% y = mapminmax(A',0,1)
+% 
+% % [dim,num] = size(A)
+% % tic
+% % for i = 1:num
+% %     A(:,i) = A(:,i)/norm(A(:,1));
+% % end 
+% % t1 = toc
+% % for i = 1 : num
+% % 
+% %    X(:,i) = X(:,i) / norm(X(:,i)) ;
+% % A(A==0)=0.025
+% y(isnan(y)) = 0 
+% y(y==0)=0.0125
+% % t = results(:,9)
+% % t(t~=3)=0
+% % t(t==3)=1
+% % normalized_data(normalized_data==0)=0.275
+% m = [y',round(t)]
+% % m(m==0)= 0.125
+% m
+
